@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Calculator for Bootcamp</h1>
+        <div class="calculator">
+            <input placeholder="0" />
+            <button class="button button-all-clear" onclick="reset()">AC</button>
+            <button class="button button-sign-change-key" onclick="signChangeKey()">+/-</button>
+            <button class="button button-percent" onclick="persent()">%</button>
+            <button class="button button-arithmetic-operations" onclick="division()">÷</button>
+            <button class="button" onclick="append('7')">7</button>
+            <button class="button" onclick="append('8')">8</button>
+            <button class="button" onclick="append('9')">9</button>
+            <button class="button button-arithmetic-operations" onclick="multiply()">x</button>
+            <button class="button" onclick="append('4')">4</button>
+            <button class="button" onclick="append('5')">5</button>
+            <button class="button" onclick="append('6')">6</button>
+            <button class="button button-arithmetic-operations" onclick="minas()">-</button>
+            <button class="button" onclick="append('1')">1</button>
+            <button class="button" onclick="append('2')">2</button>
+            <button class="button" onclick="append('3')">3</button>
+            <button class="button button-arithmetic-operations" onclick="plus()">+</button>
+            <button class="button button-zero" onclick="append('0')">0</button>
+            <button class="button" onclick="append('.')">.</button>
+            <button class="button button-equal" onclick="equal()">=</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
