@@ -4,21 +4,16 @@ let input = document.querySelector('input');
 let getNumber = "";
 
 const append = (btnNumbre) => {
-    getNumber += btnNumbre;　　
+    getNumber += btnNumbre;
     input.value = getNumber;
 }
-
-const update = () => {
-    getNumber = '';
-    input.value = '';
-};
 
 let plusNumber = 0;
 let plusCount = 0;
 const plus = () => {
     plusCount++;
     plusNumber += Number(getNumber)
-  update();
+    getNumber = '';
 }
 
 let minasNumber = 0;
@@ -27,10 +22,10 @@ const minas = () => {
     minasCount++;
     if (minasCount === 1) {
         minasNumber += Number(getNumber)
-        update();
+        getNumber = '';
     } else {
         minasNumber -= Number(getNumber)
-        update();
+        getNumber = '';
     }
 }
 
@@ -40,10 +35,10 @@ const multiply = () => {
     multiplyCount++;
     if (multiplyCount === 1) {
         multiplyNumber += Number(getNumber)
-       update();
+        getNumber = '';
     } else {
         multiplyNumber *= Number(getNumber)
-       update();
+       getNumber = '';
     }
 }
 
@@ -53,10 +48,10 @@ const division = () => {
     divisionCount++;
     if (divisionCount == 1) {
         divisionNumber += Number(getNumber)
-       update();
+        getNumber = '';
     } else {
         divisionNumber /= Number(getNumber)
-      update();
+        getNumber = '';
     }
 }
 
@@ -89,7 +84,8 @@ const persent = () => {
 }
 
 const reset = () => {
-   update();
+    getNumber = '';
+    input.value = '';
     plusNumber = 0;
     plusCount = 0;
     minasNumber = 0;
